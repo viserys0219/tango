@@ -10,9 +10,6 @@ class Category(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
         super(Category, self).save(*args, **kwargs)
-        print super(Category)
-        print super(Category, self)
-        print super()
 
     def __unicode__(self):
         return self.name
